@@ -72,10 +72,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "rivera-para-coding:build:production"
+              "browserTarget": "rivera-para-coding:build:production",
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
-              "browserTarget": "rivera-para-coding:build:development"
+              "browserTarget": "rivera-para-coding:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
