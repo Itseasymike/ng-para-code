@@ -14,17 +14,6 @@ export class AppComponent {
 
   constructor(private dataService: MockDataService) {
 
-    dataService.api.pageData.users().subscribe(
-      {
-        next: (data: User[]) => {
-          this.data = data;
-        },
-        error: (err: HttpErrorResponse) => {
-          console.log(err);
-        }
-      }
-    );
-
   }
 
 }
