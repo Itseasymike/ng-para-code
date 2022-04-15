@@ -8,11 +8,11 @@ import {User} from '../models/page-data.interface';
 })
 export class MockDataService {
 
-  proxy = 'data'
+  private proxy = 'data/'
 
   api = {
     pageData: {
-      users: (): Observable<User[]> => this.http.get<User[]>(this.proxy + '/users')
+      users: (): Observable<User[]> => this.http.get<User[]>(this.proxy + 'users')
     }
   }
 

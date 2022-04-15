@@ -1,0 +1,10 @@
+{
+  "/data": {
+    "target": "http://jsonplaceholder.typicode.com",
+    "secure": false,
+    "changeOrigin": true,
+    "pathRewrite": {
+      "^/data": ""
+    }
+  }
+}
