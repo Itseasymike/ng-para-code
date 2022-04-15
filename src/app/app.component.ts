@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
-import {User} from './models/page-data.interface';
 import {MockDataService} from './services/mock-data.service';
 import {HttpErrorResponse} from '@angular/common/http';
+import {User} from './models/user-data.interface';
 
 @Component({
   selector: 'app-root',
