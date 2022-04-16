@@ -6,6 +6,7 @@ import {AppComponent} from './app.component';
 import {HttpClientModule} from '@angular/common/http';
 import {MockDataService} from './services/mock-data.service';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MatTableModule,
     BrowserAnimationsModule,
   ],
   providers: [

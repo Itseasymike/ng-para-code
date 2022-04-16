@@ -1,4 +1,57 @@
+<!-- Revised MatTable Implementation -->
 <section class="grid">
-  <pre *ngIf="data">{{data | json}}</pre>
-  <h2 *ngIf="!data">No Data</h2>
+  <h2 class="mat-h2" *ngIf="data">Users</h2>
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8"> 
+    <ng-container matColumnDef="name">
+       <th mat-header-cell *matHeaderCellDef>Name</th>
+       <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+    </ng-container>
+    <ng-container matColumnDef="email">
+       <th mat-header-cell *matHeaderCellDef>Email</th>
+       <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+    </ng-container>
+    <ng-container matColumnDef="address">
+       <th mat-header-cell *matHeaderCellDef>Address</th>
+       <td mat-cell *matCellDef="let element"> {{element.address.street}} {{element.address.suite}} <br/> {{element.address.city}}, {{element.address.zipcode}} </td>
+    </ng-container>
+    <ng-container matColumnDef="phone">
+       <th mat-header-cell *matHeaderCellDef>Phone</th>
+       <td mat-cell *matCellDef="let element"> {{element.phone}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  <h1 class="mat-h1" *ngIf="!data">No Data</h1>
 </section>
+
+
+
+<!-- Initial HTML Implementation  -->
+<!-- <section class="grid">
+  <h2 class="mat-h2" *ngIf="data">Users</h2>
+  <table class="mat-table mat-elevation-z8" *ngIf="data">
+    <thead>
+      <tr class="mat-header-row">
+        <th class="mat-header-cell">Name</th>
+        <th class="mat-header-cell">E-Mail</th>
+        <th class="mat-header-cell">Address</th>
+        <th class="mat-header-cell">Phone</th>
+      </tr>
+    </thead>
+    <tbody class="mat-body">
+      <tr *ngFor="let user of data" class="mat-row">
+        <td class="mat-cell">{{user.name}}</td>
+        <td class="mat-cell">{{user.email}}</td>
+        <td class="mat-cell">{{user.address.street}} {{user.address.suite}} <br/> {{user.address.city}}, {{element.address.zipcode}}</td>
+        <td class="mat-cell">{{user.phone}}</td>
+      </tr>
+   </tbody>
+  </table>
+  <h1 class="mat-h1" *ngIf="!data">No Data</h1>
+</section> -->
+
+
+
+
+
+
